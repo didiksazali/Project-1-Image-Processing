@@ -1,0 +1,28 @@
+unit U_TampilCitra;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, ExtCtrls, ComCtrls, StdCtrls, ExtDlgs;
+
+type
+  TF_TampilCitra = class(TForm)
+    PanelAtas: TPanel;
+    ButtonAmbilCitra: TButton;
+    StatusBar: TStatusBar;
+    OpenPictureDialog1: TOpenPictureDialog;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  F_TampilCitra: TF_TampilCitra;
+
+implementation
+
+{$R *.dfm}
+
+end.

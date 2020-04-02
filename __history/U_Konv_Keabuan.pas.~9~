@@ -1,0 +1,44 @@
+unit U_Konv_Keabuan;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, ExtCtrls, ExtDlgs;
+
+type
+  TFormKonversiKeabuan = class(TForm)
+    ImageSumber: TImage;
+    ImageKonversi: TImage;
+    ButtonProses: TButton;
+    Button1: TButton;
+    OpenPictureDialog: TOpenPictureDialog;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormKonversiKeabuan: TFormKonversiKeabuan;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFormKonversiKeabuan.Button1Click(Sender: TObject);
+begin
+if OpenPictureDialog.Execute then
+    begin
+      if F_Citra = nil then
+
+
+      with F_Citra do
+      begin
+ImageSumber.Picture.LoadFromFile(OpenPictureDialog.FileName);
+        ClientHeight := ImageSumber.Picture.Height;
+        ClientWidth := ImageSumber.Picture.Width;
+end;
+end;
+end.

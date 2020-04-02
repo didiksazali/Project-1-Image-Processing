@@ -1,0 +1,24 @@
+program ProjectImageBlending;
+
+uses
+  Forms,
+  Unit1 in 'Unit1.pas' {Form1},
+  U_TampilCitra in 'U_TampilCitra.pas' {F_TampilCitra},
+  U_FormCitra in 'U_FormCitra.pas' {F_Citra},
+  U_CobaInduk in 'U_CobaInduk.pas' {F_CobaInduk},
+  U_CobaAnak in 'U_CobaAnak.pas' {F_CobaAnak},
+  F_ImageBlending in 'F_ImageBlending.pas' {FormImageBlending},
+  FormCitraBlending in 'FormCitraBlending.pas' {FormCitra},
+  FormCitraBlending2 in 'FormCitraBlending2.pas' {FormCitra2},
+  FormHasilBlending in 'FormHasilBlending.pas' {FormHasil};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFormImageBlending, FormImageBlending);
+  Application.CreateForm(TFormCitra2, FormCitra2);
+  Application.CreateForm(TFormHasil, FormHasil);
+  Application.Run;
+end.

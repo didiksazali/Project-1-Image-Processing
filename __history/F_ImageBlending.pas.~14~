@@ -1,0 +1,52 @@
+unit F_ImageBlending;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, ExtCtrls, StdCtrls, ExtDlgs;
+
+type
+  TFormImageBlending = class(TForm)
+    Panel1: TPanel;
+    Button1: TButton;
+    Button2: TButton;
+    Label1: TLabel;
+    Edit1: TEdit;
+    Label2: TLabel;
+    Edit2: TEdit;
+    Button3: TButton;
+    OpenPictureDialog1: TOpenPictureDialog;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormImageBlending: TFormImageBlending;
+
+implementation
+
+uses FormCitraBlending, FormCitraBlending2, FormHasilBlending;
+
+{$R *.dfm}
+
+procedure TFormImageBlending.Button1Click(Sender: TObject);
+begin
+  if OpenPictureDialog1.Execute then
+    begin
+      if FormCitraBlending=nil then
+        Application.CreateForm(F_ImageBlending, FormCitraBlending);
+
+         with F_ImageBlending do
+          begin
+            Image1.Picture.LoadFromFile(OpenPictureDialog1.FileName);
+            ClientHeight := image1.Picture.Height;
+            ClientWidth := image1.Picture.Width;
+          end;
+    end;
+end;
+
+end.

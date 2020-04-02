@@ -1,0 +1,24 @@
+unit FormCitraBlending;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs;
+
+type
+  TFormCitra = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormCitra: TFormCitra;
+
+implementation
+
+{$R *.dfm}
+
+end.

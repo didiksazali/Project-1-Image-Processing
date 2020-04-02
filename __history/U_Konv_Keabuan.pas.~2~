@@ -1,0 +1,24 @@
+unit U_Konv_Keabuan;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs;
+
+type
+  TFormKonversiKeabuan = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormKonversiKeabuan: TFormKonversiKeabuan;
+
+implementation
+
+{$R *.dfm}
+
+end.
